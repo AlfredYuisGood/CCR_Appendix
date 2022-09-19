@@ -1,0 +1,11 @@
+\subsection{Influence of Parameters}
+In order to deeply understand the performance of CCR, we investigate the impacts of key parameter settings among CCR, including Top-$K$ and $\lambda$.
+First and foremost, $\lambda$ is adopted in Eq~\eqref{deltaoptimization} and Eq~\eqref{generatedelta}, a large highlights explanation strength while decreasing the significance of complexity.
+As illustrated on the left part of Figure~\ref{fig:rq4}, increasing $\lambda$ causes CCR to successfully generate explanations for more items, but it also increases explanation complexity as more attributes are required..
+Furthermore, we observed that the explanation strength is very steady and is not strongly impacted by $\lambda$.
+This is due to the fact that $\epsilon$ governs the margin for the ranking score to turn a recommendation.
+The middle and right parts clearly show that the recommendation performance improves as $K$ increases.
+For example, average turn decreases as $K$ increases, whereas SR@20 increases as $K$ increases.
+This makes sense since the $K$ value represents the number of items recommended at any given time.
+The more items that are recommended, the higher success rate is.
+Therefore, we conclude that the optimal $\lambda$ is 6, and the value of $K$ can be adjusted to meet the needs.
